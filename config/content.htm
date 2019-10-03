@@ -11,8 +11,22 @@
 <h3>0912</h3>
 <h3>0919</h3>
 <h3>0926</h3>
-<p>查看教學步驟網站影片</p>
+<p>參考教學步驟網站影片</p>
 <p><a href="https://drive.google.com/open?id=1hZqNsOj4_47hVcRRl0UdwL5BW7yatPMo">https://drive.google.com/open?id=1hZqNsOj4_47hVcRRl0UdwL5BW7yatPMo</a></p>
+<p>1.進入<strong><a href="/mde.tw">mde.tw</a></strong>，點選本次課程 <strong><a href="http://mde.tw/cp2019">2019 Fall 計算機程式</a></strong> </p>
+<p>about&gt;課程工具套件&gt; 下載 <strong><a href="https://drive.google.com/file/d/1lNCUsmRtsl5K128Oa2lbN2ZmriXynrQP/view?usp=sharing">dartpad_based.7z</a></strong><span>  (可攜程式)</span></p>
+<p><span><img alt="" height="212" src="/images/chrome_2019-10-03_23-50-03.png" width="712"/></span></p>
+<p><span>2.打開<strong><a href="https://github.com/">Github</a></strong>，進入本次所創建的 <strong><a href="https://github.com/40623155/cp2019">倉儲(CP2019)</a>，</strong>Clone 下載自己的倉儲至所需位置。</span></p>
+<p><span>(路徑：Y:\tmp\)</span></p>
+<p><span>01.指令碼/git clone <a href="https://github.com/40623155/cp2019">https://github.com/40623155/cp2019</a></span></p>
+<p><img alt="" height="252" src="/images/cmd_2019-10-04_00-00-59.png" width="654"/></p>
+<p><span>02.下載壓縮檔，後放入可攜資料夾內</span></p>
+<p><span><img alt="" height="579" src="/images/chrome_2019-10-04_00-02-18.png" width="1290"/></span></p>
+<p><span>3.於Y:\tmp\cp2019中，輸入以下指令</span></p>
+<p><strong>*git submodule  add https://github.com/mdecourse/cmsimde  .git cmsimde</strong></p>
+<p>下載結束後，打開至Y:\tmp\cp2019\cmsimde\up_dir</p>
+<p>將內容檔案文件複製到Y:\tmp\cp2019</p>
+<p><img alt="" height="479" src="/images/explorer_2019-10-04_00-13-31.png" width="775"/></p>
 <p></p>
 <h2>Videos</h2>
 <h1>Origin</h1>
@@ -31,3 +45,16 @@
 <p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
 <p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
 <p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
+<h1>Git command</h1>
+<p>git status ：(展示目前狀態)</p>
+<p>git branch ：分支名 (創建新分支)</p>
+<p><span>git log --oneline --graph --all：(檢查各提交間的關聯)</span></p>
+<p><span> git merge 分支名：(合併分支)</span></p>
+<p><span>git log ：(查看版次)</span></p>
+<p>git clone  ：(從遠端倉儲複製資料到指定資料夾)</p>
+<p>git add .   ：(提交的所有修改放到暫存區)</p>
+<p>git comit -m： (暫存區的資料提交到分支)</p>
+<p>git push ： (將資料推送到遠端)</p>
+<p>cd  資料夾名稱：(轉換當前的目錄位置)</p>
+<p>git checkout：(替換工作區的版本)</p>
+<p></p>
