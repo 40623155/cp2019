@@ -149,8 +149,60 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">Teach << <a href='Teach.html'>Previous</a> <a href='0919.html'>Next</a> >> 0919<br /><h1>0912</h1>
-<br />Teach << <a href='Teach.html'>Previous</a> <a href='0919.html'>Next</a> >> 0919</div>
+    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='亂數分組.html'>Next</a> >> 亂數分組<br /><h1>迴圈</h1>
+<p><br/><span>引入 For loop 程式</span></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">// 在所有函式定義外圍所宣告的變數, 稱為全域變數, 有效範圍包含各函式內部與外部
+// for 迴圈所使用的索引值, 宣告為整數 (integer)
+int i;
+// 累加起始值 start 宣告為整數, 且設為 1
+int start = 1;
+// 累加終止值 end 宣告為整數, 且設為 10
+int end = 10;
+// 累加總數值 sum 宣告為整數
+int sum;
+
+// 定義 main() 主函式內容, 目的在利用 for 迴圈進行整數的累加
+main(){
+  // 將前面已經宣告為全域整數的變數 sum 設為 0, 表示從 0 開始進行累加
+  sum = 0;
+  // 執行 for 迴圈內的整數累加設計, 使用前面已經宣告為全域整數的 i 作為索引變數
+  // 分別從 start 開始累加至 end, 且每次迴圈的索引值增加 1
+  for(i=start;i &lt;= end ;i++){
+    // 當索引變數 i 所對應的值小於或等於 end 時, 對 sum 變數加上 i
+    sum += i;
+    // 可以在 for 迴圈每一個階段運算時, 列出當時的 sum 對應值, 查驗是否正確
+    //print("$sum");
+  }
+  // for 迴圈累加完成後, 列出最後訊息
+  print('從 $start 累加至 $end 的總數值為 $sum');
+}</pre>
+<p><br/><iframe height="600" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/for&amp;theme=dark" width="800"></iframe></p>
+<p></p>
+<p><span>dartpad:</span><a href="https://dartpad.dartlang.org/?id=0640641f25656a73d340260211f3bef2">https://dartpad.dartlang.org/?id=0640641f25656a73d340260211f3bef2</a></p>
+<p><span>gist:</span><a href="https://gist.github.com/40623155/0640641f25656a73d340260211f3bef2">https://gist.github.com/40623155/0640641f25656a73d340260211f3bef2</a></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">void main() {
+ print("你是不是偷看我網頁哈囉 ");
+}</pre>
+<p><br/><br/></p>
+<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=0640641f25656a73d340260211f3bef2" width="800"></iframe></p>
+<p>gist：<a href="https://gist.github.com/40623155/b69264c1852b386c3dd2b5d07cfd7d19">https://gist.github.com/40623155/b69264c1852b386c3dd2b5d07cfd7d19</a></p>
+<p>darpad：<a href="https://mde.tw/dartpad/?id=b69264c1852b386c3dd2b5d07cfd7d19">https://mde.tw/dartpad/?id=b69264c1852b386c3dd2b5d07cfd7d19</a></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">int i;
+int sum;
+
+main() {
+  sum = 0;
+  for(i=1;i &lt;=10 ;i++){
+    sum += i;
+    print("$sum");
+  }
+ print("sum = $sum");
+}
+
+fun1(){
+}</pre>
+<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=b69264c1852b386c3dd2b5d07cfd7d19" width="800"></iframe></p>
+<br />About << <a href='About.html'>Previous</a> <a href='亂數分組.html'>Next</a> >> 亂數分組</div>
         
     <!-- footer -->
       <div class="container">

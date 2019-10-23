@@ -6,15 +6,159 @@
 <p><a href="https://github.com/40623155/cp2019">https://github.com/40623155/cp2019</a></p>
 <p>個人Youtube：</p>
 <p><a href="https://www.youtube.com/channel/UC4BEyZJaGnR0oHdEUNMaeNA">https://www.youtube.com/channel/UC4BEyZJaGnR0oHdEUNMaeNA</a></p>
+<h2>迴圈</h2>
+<p><br/><span>引入 For loop 程式</span></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">// 在所有函式定義外圍所宣告的變數, 稱為全域變數, 有效範圍包含各函式內部與外部
+// for 迴圈所使用的索引值, 宣告為整數 (integer)
+int i;
+// 累加起始值 start 宣告為整數, 且設為 1
+int start = 1;
+// 累加終止值 end 宣告為整數, 且設為 10
+int end = 10;
+// 累加總數值 sum 宣告為整數
+int sum;
+
+// 定義 main() 主函式內容, 目的在利用 for 迴圈進行整數的累加
+main(){
+  // 將前面已經宣告為全域整數的變數 sum 設為 0, 表示從 0 開始進行累加
+  sum = 0;
+  // 執行 for 迴圈內的整數累加設計, 使用前面已經宣告為全域整數的 i 作為索引變數
+  // 分別從 start 開始累加至 end, 且每次迴圈的索引值增加 1
+  for(i=start;i &lt;= end ;i++){
+    // 當索引變數 i 所對應的值小於或等於 end 時, 對 sum 變數加上 i
+    sum += i;
+    // 可以在 for 迴圈每一個階段運算時, 列出當時的 sum 對應值, 查驗是否正確
+    //print("$sum");
+  }
+  // for 迴圈累加完成後, 列出最後訊息
+  print('從 $start 累加至 $end 的總數值為 $sum');
+}</pre>
+<p><br/><iframe height="600" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/for&amp;theme=dark" width="800"></iframe></p>
+<p></p>
+<p><span>dartpad:</span><a href="https://dartpad.dartlang.org/?id=0640641f25656a73d340260211f3bef2">https://dartpad.dartlang.org/?id=0640641f25656a73d340260211f3bef2</a></p>
+<p><span>gist:</span><a href="https://gist.github.com/40623155/0640641f25656a73d340260211f3bef2">https://gist.github.com/40623155/0640641f25656a73d340260211f3bef2</a></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">void main() {
+ print("你是不是偷看我網頁哈囉 ");
+}</pre>
+<p><br/><br/></p>
+<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=0640641f25656a73d340260211f3bef2" width="800"></iframe></p>
+<p>gist：<a href="https://gist.github.com/40623155/b69264c1852b386c3dd2b5d07cfd7d19">https://gist.github.com/40623155/b69264c1852b386c3dd2b5d07cfd7d19</a></p>
+<p>darpad：<a href="https://mde.tw/dartpad/?id=b69264c1852b386c3dd2b5d07cfd7d19">https://mde.tw/dartpad/?id=b69264c1852b386c3dd2b5d07cfd7d19</a></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">int i;
+int sum;
+
+main() {
+  sum = 0;
+  for(i=1;i &lt;=10 ;i++){
+    sum += i;
+    print("$sum");
+  }
+ print("sum = $sum");
+}
+
+fun1(){
+}</pre>
+<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=b69264c1852b386c3dd2b5d07cfd7d19" width="800"></iframe></p>
+<h2>亂數分組</h2>
+<p>dartpad：<a href="https://dartpad.dartlang.org/?id=7d9809787c09d222218b55ad763dac95">https://dartpad.dartlang.org/?id=7d9809787c09d222218b55ad763dac95</a></p>
+<p>gist：<a href="https://gist.github.com/40623155/7d9809787c09d222218b55ad763dac95">https://gist.github.com/40623155/7d9809787c09d222218b55ad763dac95</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import 'dart:html';
+
+void main() {
+  // 每一組 10 人
+  int num = 10;
+  // 組序由 1 開始
+  int gth = 1;
+  // 迴圈序號變數
+  int i;
+  // 每組學員暫存數列
+  var gp_list = [];
+  // 全班分組數列
+  var cp2019 = [];
+
+  HttpRequest.getString(
+          'https://mde.tw/cp2019/downloads/2019fall_cp_1a_list.txt')
+      .then((String resp) {
+    // 利用 trim() 去除字串最後的跳行符號, 之後再利用 split() 根據 \n 轉為數列
+    var stud_list = resp.trim().split("\n");
+    // 數列利用 shuffle() 方法以隨機方法弄亂順序
+    stud_list.shuffle();
+    // 逐一讀取已經弄亂的學生學號數列, 利用模數運算每幾人分成一組
+    for (i = 0; i &lt; stud_list.length; i++) {
+      // 0, 1~(num-1), num
+      if (i % num == 0) {
+        gp_list = [];
+        // 列印區隔符號
+        print('=' * 20);
+        print("group $gth :");
+        print(stud_list[i]);
+        // 在各分組數列中加入將對應的學員學號
+        gp_list.add(stud_list[i]);
+        gth = gth + 1;
+      } else {
+        print(stud_list[i]);
+        // 在各分組數列中加入將對應的學員學號
+        gp_list.add(stud_list[i]);
+      }
+      if (i % num == 0) {
+        // 逐步將各組暫存的分組數列加入全班分組數列中
+        cp2019.add(gp_list);
+      }
+    }
+    // 列出全班分組數列
+    print(cp2019);
+  });
+}
+</pre>
+<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=7d9809787c09d222218b55ad763dac95" width="800"></iframe></p>
 <h1>Class Note</h1>
 <h2>Teach</h2>
 <h3>0912</h3>
 <h3>0919</h3>
 <h3>0926</h3>
-<p>查看教學步驟網站影片</p>
+<p>參考教學步驟網站影片</p>
 <p><a href="https://drive.google.com/open?id=1hZqNsOj4_47hVcRRl0UdwL5BW7yatPMo">https://drive.google.com/open?id=1hZqNsOj4_47hVcRRl0UdwL5BW7yatPMo</a></p>
+<p>1.進入<strong><a href="/mde.tw">mde.tw</a></strong>，點選本次課程 <strong><a href="http://mde.tw/cp2019">2019 Fall 計算機程式</a></strong> </p>
+<p>about&gt;課程工具套件&gt; 下載 <strong><a href="https://drive.google.com/file/d/1lNCUsmRtsl5K128Oa2lbN2ZmriXynrQP/view?usp=sharing">dartpad_based.7z</a></strong><span>  (可攜程式)</span></p>
+<p><span><img alt="" height="212" src="/images/chrome_2019-10-03_23-50-03.png" width="712"/></span></p>
+<p><span>2.打開<strong><a href="https://github.com/">Github</a></strong>，進入本次所創建的 <strong><a href="https://github.com/40623155/cp2019">倉儲(CP2019)</a>，</strong>Clone 下載自己的倉儲至所需位置。</span></p>
+<p><span>(路徑：Y:\tmp\)</span></p>
+<p><span>01.指令碼/git clone <a href="https://github.com/40623155/cp2019">https://github.com/40623155/cp2019</a></span></p>
+<p><img alt="" height="252" src="/images/cmd_2019-10-04_00-00-59.png" width="654"/></p>
+<p><span>02.下載壓縮檔，後放入可攜資料夾內</span></p>
+<p><span><img alt="" height="579" src="/images/chrome_2019-10-04_00-02-18.png" width="1290"/></span></p>
+<p><span>3.於Y:\tmp\cp2019中，輸入以下指令</span></p>
+<p><strong>*git submodule  add https://github.com/mdecourse/cmsimde  .git cmsimde</strong></p>
+<p>下載結束後，打開至Y:\tmp\cp2019\cmsimde\up_dir</p>
+<p>將內容檔案文件複製到Y:\tmp\cp2019</p>
+<p><img alt="" height="479" src="/images/explorer_2019-10-04_00-13-31.png" width="775"/></p>
+<h3>1017</h3>
+<p>參考老師網站</p>
+<p><a href="http://mde.tw/cp2019/content/Dart2%20%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95.html">http://mde.tw/cp2019/content/Dart2%20%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95.html</a></p>
+<p>學習如何崁入dartpad入網站</p>
+<p>重點影片：</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ATkp974alb4" width="560"></iframe></p>
 <p></p>
-<h2>Videos</h2>
+<p>步驟：</p>
+<p>1.利用dartpad確認程式碼是否為可用</p>
+<p><img alt="" height="327" src="/images/chrome_2019-10-23_21-39-57.png" width="1894"/></p>
+<p>2.複製程式碼&gt;前往<a href="https://github.com/">github</a>&gt;打開<a href="https://gist.github.com/40623155">gist</a></p>
+<p><img alt="" height="969" src="/images/chrome_2019-10-23_21-43-39.png" width="1920"/></p>
+<p>3.建立gist&gt;貼上程式碼&gt;程式檔名後要加上.dart</p>
+<p><img alt="" height="703" src="/images/未命名.png" width="1015"/></p>
+<p>4.複製建立好的網址後碼&gt;貼上dartpad查看是否能顯示出來</p>
+<p>貼上dartpad用法</p>
+<p><a href="https://dartpad.dartlang.org/">https://dartpad.dartlang.org/</a><strong>?id=+複製的後碼(紅框部分)</strong></p>
+<p><strong><img alt="" height="226" src="/images/chrome_2019-10-23_21-52-17.png" width="480"/></strong></p>
+<p>5.崁入近端網站，利用<strong>&lt;&gt;</strong>功能崁入dartpad功能</p>
+<p>崁入dartpad用法</p>
+<p>利用&lt;&gt;內字串，會產生出dartpad介面</p>
+<p><img alt="" height="169" src="/images/SciTE_2019-10-23_21-56-42.png" width="917"/></p>
+<p><img alt="" height="626" src="/images/chrome_2019-10-23_22-02-31.png" width="838"/></p>
+<p>6.<span>崁入近端網站，利用</span><strong>&lt;/&gt;</strong><span>功能崁入dartpad 語法</span></p>
+<p><span><img alt="" height="680" src="/images/chrome_2019-10-23_22-04-04.png" width="1018"/></span></p>
+<p><span><img alt="" height="442" src="/images/chrome_2019-10-23_22-04-39.png" width="465"/></span></p>
+<p><span><img alt="" height="253" src="/images/01.png" width="602"/></span></p><h2>Videos</h2>
 <h1>Origin</h1>
 <h2>Course</h2>
 <p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>

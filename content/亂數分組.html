@@ -149,8 +149,59 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">Teach << <a href='Teach.html'>Previous</a> <a href='0919.html'>Next</a> >> 0919<br /><h1>0912</h1>
-<br />Teach << <a href='Teach.html'>Previous</a> <a href='0919.html'>Next</a> >> 0919</div>
+    <div id="tipue_search_content">迴圈 << <a href='迴圈.html'>Previous</a> <a href='Class Note.html'>Next</a> >> Class Note<br /><h1>亂數分組</h1>
+<p>dartpad：<a href="https://dartpad.dartlang.org/?id=7d9809787c09d222218b55ad763dac95">https://dartpad.dartlang.org/?id=7d9809787c09d222218b55ad763dac95</a></p>
+<p>gist：<a href="https://gist.github.com/40623155/7d9809787c09d222218b55ad763dac95">https://gist.github.com/40623155/7d9809787c09d222218b55ad763dac95</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import 'dart:html';
+
+void main() {
+  // 每一組 10 人
+  int num = 10;
+  // 組序由 1 開始
+  int gth = 1;
+  // 迴圈序號變數
+  int i;
+  // 每組學員暫存數列
+  var gp_list = [];
+  // 全班分組數列
+  var cp2019 = [];
+
+  HttpRequest.getString(
+          'https://mde.tw/cp2019/downloads/2019fall_cp_1a_list.txt')
+      .then((String resp) {
+    // 利用 trim() 去除字串最後的跳行符號, 之後再利用 split() 根據 \n 轉為數列
+    var stud_list = resp.trim().split("\n");
+    // 數列利用 shuffle() 方法以隨機方法弄亂順序
+    stud_list.shuffle();
+    // 逐一讀取已經弄亂的學生學號數列, 利用模數運算每幾人分成一組
+    for (i = 0; i &lt; stud_list.length; i++) {
+      // 0, 1~(num-1), num
+      if (i % num == 0) {
+        gp_list = [];
+        // 列印區隔符號
+        print('=' * 20);
+        print("group $gth :");
+        print(stud_list[i]);
+        // 在各分組數列中加入將對應的學員學號
+        gp_list.add(stud_list[i]);
+        gth = gth + 1;
+      } else {
+        print(stud_list[i]);
+        // 在各分組數列中加入將對應的學員學號
+        gp_list.add(stud_list[i]);
+      }
+      if (i % num == 0) {
+        // 逐步將各組暫存的分組數列加入全班分組數列中
+        cp2019.add(gp_list);
+      }
+    }
+    // 列出全班分組數列
+    print(cp2019);
+  });
+}
+</pre>
+<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=7d9809787c09d222218b55ad763dac95" width="800"></iframe></p>
+<br />迴圈 << <a href='迴圈.html'>Previous</a> <a href='Class Note.html'>Next</a> >> Class Note</div>
         
     <!-- footer -->
       <div class="container">
