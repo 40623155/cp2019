@@ -71,6 +71,9 @@
 <v t="leo.20191031105248.1"><vh>2019 開啟部落格網站</vh>
 <v t="leo.20191031105248.2"><vh>@edit 內容過程.md</vh></v>
 </v>
+<v t="leo.20191107110140.1"><vh>2019 期中網站</vh>
+<v t="leo.20191107110140.2"><vh>@edit 期中影片.md</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -104,6 +107,7 @@ g.es("admin pelican Github 執行完畢")
 <t tx="leo.20180115142025.1"></t>
 <t tx="leo.20180423103639.1"></t>
 <t tx="leo.20191031105248.1"></t>
+<t tx="leo.20191107110140.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
