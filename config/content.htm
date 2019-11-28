@@ -116,10 +116,20 @@ void main() {
 }
 </pre>
 <p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=7d9809787c09d222218b55ad763dac95" width="800"></iframe></p>
-<h1>Class Note</h1>
+<h1>期末範圍</h1>
+<h2>SSH新增</h2>
+<p>根據<a href="https://github.com/mdecourse/cad2019/issues/20">https://github.com/mdecourse/cad2019/issues/20</a> 依序 操作</p>
+<p>1.更改C:\Users\acer\Downloads\dartpad_based\data\portablegit\bin中的</p>
+<p>"sh_for_solvespace.exe"檔案&gt;"sh.exe"</p>
+<p><img alt="" height="151" src="/images/chrome_2019-11-28_11-02-56.png" width="538"/></p>
+<p>2.打開可攜系統，於cmd中輸入sh以進入建立ssh key畫面</p>
+<p><img alt="" height="94" src="/images/chrome_2019-11-28_11-24-55.png" width="343"/></p>
+<p>3.輸入</p>
+<pre><code> ssh-keygen -t rsa -b 4096 -C "使用者學號"<br/><img alt="" height="500" src="/images/cmd_2019-11-28_11-26-55.png" width="638"/><br/><br/></code>4.於dartpad_based\data\home\.ssh 中檢查是否有新增兩把鑰匙<br/><img alt="" height="125" src="/images/explorer_2019-11-28_11-29-49.png" width="772"/><br/>5.下載<a href="https://drive.google.com/file/d/1ISq1TJuaZyYZnfU33l-b7ifzmO3ejlEV/view">putty</a><br/><img alt="" height="384" src="/images/explorer_2019-11-28_11-31-14.png" width="822"/><br/>6.打開puttygen，匯入剛剛產生的key<br/><img alt="" height="579" src="/images/puttygen_2019-11-28_11-33-04.png" width="638"/><br/>7.利用"save the generated key"兩個功能生成putty key<br/><img alt="" height="248" src="/images/explorer_2019-11-28_11-34-35.png" width="872"/><br/>8.利用scite，打開id_rsa.pub檔案<br/><img alt="" height="552" src="/images/SciTE_2019-11-28_11-36-17.png" width="616"/><br/>9.複製字串內容，接著打開github&gt;setting&gt;<a aria-current="page" class="js-selected-navigation-item selected menu-item" data-selected-links="ssh_certificate_authorities /settings/keys" href="https://github.com/settings/keys">SSH and GPG keys<br/><img alt="" height="690" src="/images/chrome_2019-11-28_11-38-10.png" width="1638"/><br/>1</a>0.點選右上<a href="https://github.com/settings/ssh/new">new ssh key</a><br/><img alt="" height="626" src="/images/chrome_2019-11-28_11-39-42.png" width="1044"/><br/>11.新增內容至stat.bat<br/><br/></pre>
+<pre><code>set GIT_HOME=%Disk%:\portablegit\bin\
+set GIT_SSH=%Disk%:\putty\plink.exe<br/><br/></code>將這兩條內容新增至bat檔案內<br/><img alt="" height="844" src="/images/SciTE_2019-11-28_11-42-02.png" width="493"/><br/><br/>教學影片:<br/><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/79RdVFbmb6U" width="560"></iframe><br/><br/>老師教學影片：<br/><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Y6QR9fhNKrY" width="560"></iframe></pre>
+<p></p><h1>Class Note</h1>
 <h2>Teach</h2>
-<h3>0912</h3>
-<h3>0919</h3>
 <h3>0926</h3>
 <p>參考教學步驟網站影片</p>
 <p><a href="https://drive.google.com/open?id=1hZqNsOj4_47hVcRRl0UdwL5BW7yatPMo">https://drive.google.com/open?id=1hZqNsOj4_47hVcRRl0UdwL5BW7yatPMo</a></p>
