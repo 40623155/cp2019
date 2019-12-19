@@ -138,7 +138,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='期中報告.html'>期中報告</a><ul class='dropdown'><li><a href='期中影片.html'>期中影片</a><li><a href='迴圈.html'>迴圈</a><li><a href='亂數分組.html'>亂數分組</a></li></ul><li class='has-children'><a href='期末範圍.html'>期末範圍</a><ul class='dropdown'><li><a href='SSH新增.html'>SSH新增</a><li><a href='分組網站合併.html'>分組網站合併</a><li><a href='Button.html'>Button</a></li></ul><li class='has-children'><a href='Class Note.html'>Class Note</a><ul class='dropdown'><li class='has-children'><a href='Teach.html'>Teach</a><ul class='dropdown'><li><a href='0926.html'>0926</a><li><a href='1017.html'>1017</a></li></ul><li><a href='Videos.html'>Videos</a></li></ul><li class='has-children'><a href='Origin.html'>Origin</a><ul class='dropdown'><li><a href='Course.html'>Course</a><li><a href='Develop.html'>Develop</a></li></ul><li><a href='Git command.html'>Git command</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='期中報告.html'>期中報告</a><ul class='dropdown'><li><a href='期中影片.html'>期中影片</a><li><a href='迴圈.html'>迴圈</a><li><a href='亂數分組.html'>亂數分組</a></li></ul><li class='has-children'><a href='期末範圍.html'>期末範圍</a><ul class='dropdown'><li><a href='dia.html'>dia</a><li><a href='SSH新增.html'>SSH新增</a><li><a href='分組網站合併.html'>分組網站合併</a><li><a href='Button.html'>Button</a></li></ul><li class='has-children'><a href='Class Note.html'>Class Note</a><ul class='dropdown'><li class='has-children'><a href='Teach.html'>Teach</a><ul class='dropdown'><li><a href='0926.html'>0926</a><li><a href='1017.html'>1017</a><li><a href='1212.html'>1212</a><li><a href='1219.html'>1219</a></li></ul><li class='has-children'><a href='Videos.html'>Videos</a><ul class='dropdown'><li><a href='dia繪製與匯出轉檔.html'>dia繪製與匯出轉檔</a><li><a href='SSH設置.html'>SSH設置</a><li><a href='小組分組倉儲合併.html'>小組分組倉儲合併</a></li></li></ul></ul><li class='has-children'><a href='Origin.html'>Origin</a><ul class='dropdown'><li><a href='Course.html'>Course</a><li><a href='Develop.html'>Develop</a></li></ul><li><a href='Git command.html'>Git command</a></li>
                       </ul>
                 </nav>
               </div>
@@ -149,7 +149,7 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">期末範圍 << <a href='期末範圍.html'>Previous</a> <a href='分組網站合併.html'>Next</a> >> 分組網站合併<br /><h1>SSH新增</h1>
+    <div id="tipue_search_content">dia << <a href='dia.html'>Previous</a> <a href='分組網站合併.html'>Next</a> >> 分組網站合併<br /><h1>SSH新增</h1>
 <p>根據<a href="https://github.com/mdecourse/cad2019/issues/20">https://github.com/mdecourse/cad2019/issues/20</a> 依序 操作</p>
 <p>1.更改C:\Users\acer\Downloads\dartpad_based\data\portablegit\bin中的</p>
 <p>"sh_for_solvespace.exe"檔案&gt;"sh.exe"</p>
@@ -160,7 +160,7 @@ init_mathjax();
 <pre><code> ssh-keygen -t rsa -b 4096 -C "使用者學號"<br/><img alt="" height="500" src="./../images/cmd_2019-11-28_11-26-55.png" width="638"/><br/><br/></code>4.於dartpad_based\data\home\.ssh 中檢查是否有新增兩把鑰匙<br/><img alt="" height="125" src="./../images/explorer_2019-11-28_11-29-49.png" width="772"/><br/>5.下載<a href="https://drive.google.com/file/d/1ISq1TJuaZyYZnfU33l-b7ifzmO3ejlEV/view">putty</a><br/><img alt="" height="384" src="./../images/explorer_2019-11-28_11-31-14.png" width="822"/><br/>6.打開puttygen，匯入剛剛產生的key<br/><img alt="" height="579" src="./../images/puttygen_2019-11-28_11-33-04.png" width="638"/><br/>7.利用"save the generated key"兩個功能生成putty key<br/><img alt="" height="248" src="./../images/explorer_2019-11-28_11-34-35.png" width="872"/><br/>8.利用scite，打開id_rsa.pub檔案<br/><img alt="" height="552" src="./../images/SciTE_2019-11-28_11-36-17.png" width="616"/><br/>9.複製字串內容，接著打開github&gt;setting&gt;<a aria-current="page" class="js-selected-navigation-item selected menu-item" data-selected-links="ssh_certificate_authorities /settings/keys" href="https://github.com/settings/keys">SSH and GPG keys<br/><img alt="" height="690" src="./../images/chrome_2019-11-28_11-38-10.png" width="1638"/><br/>1</a>0.點選右上<a href="https://github.com/settings/ssh/new">new ssh key</a><br/><img alt="" height="626" src="./../images/chrome_2019-11-28_11-39-42.png" width="1044"/><br/>11.新增內容至stat.bat<br/><br/></pre>
 <pre><code>set GIT_HOME=%Disk%:\portablegit\bin\
 set GIT_SSH=%Disk%:\putty\plink.exe<br/><br/></code>將這兩條內容新增至bat檔案內<br/><img alt="" height="844" src="./../images/SciTE_2019-11-28_11-42-02.png" width="493"/><br/><br/>教學影片:<br/><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/79RdVFbmb6U" width="560"></iframe><br/><br/>老師教學影片：<br/><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Y6QR9fhNKrY" width="560"></iframe></pre>
-<br />期末範圍 << <a href='期末範圍.html'>Previous</a> <a href='分組網站合併.html'>Next</a> >> 分組網站合併</div>
+<br />dia << <a href='dia.html'>Previous</a> <a href='分組網站合併.html'>Next</a> >> 分組網站合併</div>
         
     <!-- footer -->
       <div class="container">

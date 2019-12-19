@@ -149,8 +149,28 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">小組分組倉儲合併 << <a href='小組分組倉儲合併.html'>Previous</a> <a href='Course.html'>Next</a> >> Course<br /><h1>Origin</h1>
-<br />小組分組倉儲合併 << <a href='小組分組倉儲合併.html'>Previous</a> <a href='Course.html'>Next</a> >> Course</div>
+    <div id="tipue_search_content">1017 << <a href='1017.html'>Previous</a> <a href='1219.html'>Next</a> >> 1219<br /><h1>1212</h1>
+<p>在學校電腦的第三磁區有病毒的存在，會讓自己隨身碟變成點ink檔</p>
+<p>原先資料夾內的資料會消失變成捷徑檔</p>
+<p>上網找尋到解決辦法</p>
+<p>1.</p>
+<p>打開”工作管理員”-&gt;”處理程序”，按 ”顯示來自所有使用者的處理程序”， 按影像名稱做排序，看是否有”WScript.exe”(2 個)，若有表示中毒了， 先選它將之”結束處理”，可能要用 2~3 次才會結束它。</p>
+<p>2.</p>
+<p>用”cmd”打開"命令提字元視窗”，預設在”C:\Users\xxxxx&gt;”(xxxxx; 為登 入者名稱)，下指令: cd AppData\Roaming dir /ah             // 將隱藏目錄列出，一般正常不會有。<br/> rd WindowsServices /s                                      // 若有 WindowsServices 目錄將之全刪除<br/> cd “Microsoft\Windows\Start Menu\Programs\Startup”          // 切換目錄<br/> del helper.lnk                                                                                                        // 刪除檔案</p>
+<p>3.</p>
+<p>重新開機，回到 STEP1 看是否有 WScript.exe，若沒有才確認主機沒有 該病毒，才可至步 2 對 USB 隨身碟清毒。 </p>
+<p>* (注意必須完成步 1 才能進行步 2)對 USB 隨身碟清毒: </p>
+<p>4.</p>
+<p> 插入中毒的 USB 隨身碟，取消自動播放選項，用”cmd”打開"命令提字 元視窗”，打開”我的電腦”可查看 USB 隨身碟代號為何，如是 F，在命 令提字元視窗下指令 F:切換至 USB 隨身碟的根目錄。</p>
+<p>5.</p>
+<p>del xxxxx.lnk                                 // 刪除 lnk檔 ,xxxx(有可能是隨身碟 品牌名稱如 transcend) <br/>rd WindowsServices /s         // 隱藏檔 WindowsServices 目錄 ( 含 ) 檔案全刪除</p>
+<p>6.</p>
+<p>用檔案總管開啟”_“目錄，將原始文件全選剪下，貼回至隨身碟根目錄， 再將”_”目錄刪除(請確認是空的)，即完成清毒。 </p>
+<p>7.</p>
+<p>將隨身碟退出主機，再接回主機，若發現又只變成一個 lnk 檔，表示 步驟 1 主機清毒沒做好，請再回步驟 1 做起。</p>
+<p></p>
+<p>解決步驟pdf：<br/><strong><a href="./../downloads/lnk隨身碟病毒處理方式簡易說明.pdf">lnk隨身碟病毒處理方法</a></strong></p>
+<br />1017 << <a href='1017.html'>Previous</a> <a href='1219.html'>Next</a> >> 1219</div>
         
     <!-- footer -->
       <div class="container">
