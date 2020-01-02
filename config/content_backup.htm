@@ -480,17 +480,17 @@ main() {
 <!-- 透過 getDart(dirname) 取位於 downloads/dart_ex/ 目錄中 dirname 目錄中的 Dart 程式碼 -->
 <script>
 function getDart(dirname){
-    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823123&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40623155&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
     document.getElementById("iframe").src = source ;
 }
 
 function getHtmlDart(dirname){
-    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823123&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=40623155&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
 document.getElementById("iframe").src = source ;
 }
 
 function getFlutter(dirname){
-    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823123&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40623155&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
 document.getElementById("iframe").src = source ;
 }
 
@@ -505,11 +505,38 @@ document.getElementById("iframe").height = 600 ;
 }
 </script>
 <p><button onclick="getHtmlDart('rungekutta')">rungekutta </button><button onclick="getHtmlDart('roc_flag')">ROC Flag </button><button onclick="getHtmlDart('helloworld')">helloworld </button><button onclick="getHtmlDart('USA_flag')">USA Flag</button><span><span> </span></span><span><span> </span></span><button onclick="getHtmlDart('temperature')">temperature </button><button onclick="getHtmlDart('temp2')">temp2 </button><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
-<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823123&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/rungekutta&amp;theme=dark" width="800"></iframe></p>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40623155&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/rungekutta&amp;theme=dark" width="800"></iframe></p>
 <p><br/> <a href="/get_page/W16%E6%9F%A5%E9%A9%97%E8%80%83%E8%A9%A6/RungeKutta.html"></a></p>
 <!-- for site wrap -->
-<p><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/rxpB9gLeAPQ" width="560"></iframe></p>
-<h1>W17查驗考試</h1>
+<p><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/rxpB9gLeAPQ" width="560"></iframe></p><h1>W17查驗考試</h1>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">CtoF(num kg){
+return kg*2.20462262;
+}
+FtoC(num ib){
+return ib*0.45359237;
+}
+main() {
+    int len;
+    var type;
+    var number;
+  List temp = ["20C", "30C", "50F", "40C", "23F"];
+    for (var data in temp) {
+        len = data.length;
+    type = data[len-1];
+    number = data.substring(0, len-1);
+    number = int.parse(number);
+    if (type == "C"){
+      //print("C: $type, $number");
+      print("公制 $number 公斤 = 英制 ${CtoF(number)} 磅");
+    }else{
+      //print("F: $type, $number");
+      print("英制 $number 磅 = 公制 ${FtoC(number)} 公斤");
+    }
+      
+  } // for
+} // main
+</pre>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/wU7dYW4Vo6o" width="560"></iframe></p>
 <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
 <script src="/get_page/cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
 <script src="/get_page/cmsimde/static/chimper/js/jquery-ui.js"></script>

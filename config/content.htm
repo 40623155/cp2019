@@ -509,6 +509,35 @@ document.getElementById("iframe").height = 600 ;
 <p><br/> <a href="/get_page/W16%E6%9F%A5%E9%A9%97%E8%80%83%E8%A9%A6/RungeKutta.html"></a></p>
 <!-- for site wrap -->
 <p><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/rxpB9gLeAPQ" width="560"></iframe></p><h1>W17查驗考試</h1>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">CtoF(num kg){
+return kg*2.20462262;
+}
+FtoC(num ib){
+return ib*0.45359237;
+}
+main() {
+    int len;
+    var type;
+    var number;
+  List temp = ["20C", "30C", "50F", "40C", "23F"];
+    for (var data in temp) {
+        len = data.length;
+    type = data[len-1];
+    number = data.substring(0, len-1);
+    number = int.parse(number);
+    if (type == "C"){
+      //print("C: $type, $number");
+      print("公制 $number 公斤 = 英制 ${CtoF(number)} 磅");
+    }else{
+      //print("F: $type, $number");
+      print("英制 $number 磅 = 公制 ${FtoC(number)} 公斤");
+    }
+      
+  } // for
+} // main
+</pre>
+<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=dd634809b3a75aad4811f812ffad6292" width="800"></iframe></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/wU7dYW4Vo6o" width="560"></iframe></p>
 <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
 <script src="/get_page/cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
 <script src="/get_page/cmsimde/static/chimper/js/jquery-ui.js"></script>
