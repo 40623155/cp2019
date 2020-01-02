@@ -351,7 +351,8 @@ main() {
 <p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=51bbf4acbee79281027ac23ad1897e33" width="800"></iframe></p>
 <p></p>
 <!-- for site wrap -->
-<p></p>
+<p><img caption="false" height="299" src="/images/bang.png" width="488"/></p>
+<p><img alt="" height="290" src="/images/bang2.png" width="484"/></p>
 <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
 <script src="/get_page/cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
 <script src="/get_page/cmsimde/static/chimper/js/jquery-ui.js"></script>
@@ -377,8 +378,7 @@ main() {
                     });
                     </script>
             -->
-<script src="/get_page/cmsimde/static/chimper/js/main.js"></script>
-<h3>1017</h3>
+<script src="/get_page/cmsimde/static/chimper/js/main.js"></script><h3>1017</h3>
 <p>參考老師網站</p>
 <p><a href="http://mde.tw/cp2019/content/Dart2%20%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95.html">http://mde.tw/cp2019/content/Dart2%20%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95.html</a></p>
 <p>學習如何崁入dartpad入網站</p>
@@ -475,4 +475,57 @@ main() {
 <p>cd  資料夾名稱：(轉換當前的目錄位置)</p>
 <p>git checkout：(替換工作區的版本)</p>
 <h1>W16查驗考試</h1>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/rxpB9gLeAPQ" width="560"></iframe></p>
+<!-- 透過 getDart(dirname) 取位於 downloads/dart_ex/ 目錄中 dirname 目錄中的 Dart 程式碼 -->
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823123&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823123&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function getFlutter(dirname){
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823123&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+<p><button onclick="getHtmlDart('rungekutta')">rungekutta </button><button onclick="getHtmlDart('roc_flag')">ROC Flag </button><button onclick="getHtmlDart('helloworld')">helloworld </button><button onclick="getHtmlDart('USA_flag')">USA Flag</button><span><span> </span></span><span><span> </span></span><button onclick="getHtmlDart('temperature')">temperature </button><button onclick="getHtmlDart('temp2')">temp2 </button><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823123&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/rungekutta&amp;theme=dark" width="800"></iframe><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/rxpB9gLeAPQ" width="560"></iframe></p>
+<!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+<script src="/get_page/cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/jquery-ui.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/popper.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/bootstrap.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/aos.js"></script>
+<!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
