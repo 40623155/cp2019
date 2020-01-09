@@ -448,7 +448,7 @@ vertical: body pane on the botton</t>
 </t>
 <t tx="leo.20200107154134.2">### 期中影片
 
-&lt;iframe src="https://youtu.be/eRI49SGJK24" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width="941" height="539" src="https://www.youtube.com/embed/eRI49SGJK24" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 </t>
 <t tx="leo.20200107155815.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -556,8 +556,7 @@ vertical: body pane on the botton</t>
 </t>
 <t tx="leo.20200107163955.5">### ssh設置
 
-&lt;iframe src="https://youtu.be/79RdVFbmb6U" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-</t>
+&lt;iframe width="941" height="539" src="https://www.youtube.com/embed/79RdVFbmb6U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
 <t tx="leo.20200107163955.6">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -571,8 +570,7 @@ vertical: body pane on the botton</t>
 </t>
 <t tx="leo.20200107163955.7">### 反向合併
 
-&lt;iframe src="https://youtu.be/OqAN7891VmQ" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-</t>
+&lt;iframe width="941" height="539" src="https://www.youtube.com/embed/OqAN7891VmQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
 <t tx="leo.20200107164239.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -586,8 +584,7 @@ vertical: body pane on the botton</t>
 </t>
 <t tx="leo.20200107164239.2">### W16查驗考試
 
-&lt;iframe src="https://youtu.be/rxpB9gLeAPQ" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-</t>
+&lt;iframe width="941" height="539" src="https://www.youtube.com/embed/rxpB9gLeAPQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
 <t tx="leo.20200107164341.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -601,8 +598,7 @@ vertical: body pane on the botton</t>
 </t>
 <t tx="leo.20200107164341.2">### W17查驗考試
 
-&lt;iframe src="https://youtu.be/wU7dYW4Vo6o" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-</t>
+&lt;iframe width="941" height="539" src="https://www.youtube.com/embed/wU7dYW4Vo6o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
 <t tx="leo.20200107164509.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -616,7 +612,6 @@ vertical: body pane on the botton</t>
 </t>
 <t tx="leo.20200107164509.2">### Dia流程繪製
 
-&lt;iframe src="https://youtu.be/rH7rzZjDpuM" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-</t>
+&lt;iframe width="941" height="539" src="https://www.youtube.com/embed/rH7rzZjDpuM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
 </tnodes>
 </leo_file>
